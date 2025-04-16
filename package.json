@@ -1,21 +1,31 @@
 {
   "name": "monorepo-bun-hono-turborepo",
-  "private": true,
-  "workspaces": [
-    "apps/*"
-  ],
   "module": "index.ts",
-  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.14.1",
+    "@types/pg": "^8.11.13",
+    "concurrently": "^9.1.2",
+    "drizzle-kit": "^0.31.0",
+    "tsx": "^4.19.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
   "scripts": {
     "dev": "concurrently \"bun run --cwd apps/backend dev\" \"bun run --cwd apps/frontend dev\"",
     "dev:frontend": "bun run --cwd apps/frontend dev",
     "dev:backend": "bun run --cwd apps/backend dev"
   },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "concurrently": "^9.1.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.42.0",
+    "pg": "^8.14.1",
+    "postgres": "^3.4.5"
   }
 }
