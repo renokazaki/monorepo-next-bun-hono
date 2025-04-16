@@ -10,7 +10,9 @@ export default function Home() {
   };
   return (
     <div>
-      <button onClick={handleClick}>Click me!!!!</button>
+      <button onClick={handleClick} className="bg-amber-200">
+        Click me!!!!
+      </button>
     </div>
   );
 }
