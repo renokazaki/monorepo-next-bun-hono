@@ -12,6 +12,11 @@ app.use(
 const route = app.get("/hello", (c) => {
   return c.json({ message: "Hello Hono!" });
 });
-export type AppType = typeof route;
+
+const route2 = app.get("/hello2", (c) => {
+  return c.json({ message: "Hello Hono2!" });
+});
+
+export type AppType = typeof route | typeof route2;
 
 export default app;
