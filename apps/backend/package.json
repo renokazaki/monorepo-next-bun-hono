@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "wrangler dev --port 8080",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "hono": "^4.7.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250214.0",
+    "wrangler": "^4.4.0"
+  }
+}
