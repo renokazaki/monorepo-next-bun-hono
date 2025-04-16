@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  //静的サイトを生成する
+  //output: "export",
 };
 
 export default nextConfig;
